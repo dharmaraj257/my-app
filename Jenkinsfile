@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Install') { 
             steps {
-                echo"install npm" 
+                sh "install npm" 
             }
         }
         stage('Build') { 
             steps {
-                echo "ng build --prod"
+                sh "ng build --prod"
             }
         }
         stage('Deploy') { 
             steps {
-                echo "ng serve --port 4200"
+                sh "ng serve --port 4200"
             }
         }
     }
